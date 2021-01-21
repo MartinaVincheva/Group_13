@@ -20,7 +20,7 @@ unsigned countTheWords(char *str) {
     /* Обхождаме стринга/ низа*/
     while (*str)
     {     /* Проверяваме дали елемента е знак, разстояние, нов ред или табулация, които не броим */
-        if (*str == ' ' || *str == '\n' || *str == '\t' || *str == '.' || *str == '!' || *str == '?' || *str == ',' || *str == ':' || *str == ';' || *str == '@' || *str == '#' || *str == '$' || *str == '%' || *str == '^' || *str == '&' || *str == '*' || *str == '+' || *str == '=' || *str == '"' ) { 
+        if ((*str >= 'a' && *str <='z') || (*str >= 'A' && *str <= 'Z')) { 
             state = Sign;
         } else if (state == Sign) {
             state = Letter;
