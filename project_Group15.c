@@ -4,25 +4,30 @@
 int numberDigits(unsigned int, unsigned int);
 void decToBin(unsigned int);
 int main(void){
-	int a, b, status;
-    printf("Enter decimal value for A: ");
-    status = scanf("%d", &a);
-    if (status == 0){
-        printf("Invalid decimal number A.");
-        return 1;
-    }    
+    int a, b, status;       
+    do{
+        printf("Enter a decimal value for A: ");
+        status = scanf("%d", &a);
+        getchar();
+        if (status == 0){
+            printf("Invalid decimal. Pls. enter again.\n");
+        }   
+    } while (status == 0); 
     if(a < 0){
        	a = ~a;
        	a += 1;
     }
     printf("You entered A with absolute value of %d\n", a);
     decToBin(a);
-    printf("\n\nEnter decimal value for B: ");
-    status = scanf("%d", &b);
-    if (status == 0){
-        printf("Invalid decimal number A.");
-        return 1;
-    }    
+    printf("\n");
+    do{
+        printf("Enter a decimal value for B: ");
+        status = scanf("%d", &b);
+        getchar();
+        if (status == 0){
+            printf("Invalid decimal. Pls. enter again.\n");
+        }     
+    } while (status == 0);
     if (b < 0){
        	b = ~b;
        	b += 1;
