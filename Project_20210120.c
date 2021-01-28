@@ -23,9 +23,9 @@ unsigned countTheWords(char *str) {
 
     /* Обхождаме стринга / низа */
     while (*str)
-    {
+    {    
         /* Проверяваме дали символа е различен от буква. */
-        if (*str == ' ' || *str == '\n' || *str == '\t' || *str == '.' || *str == '!' || *str == '?' || *str == ',' || *str == ':' || *str == ';' || *str == '@' || *str == '#' || *str == '$' || *str == '%' || *str == '^' || *str == '&' || *str == '*' || *str == '+' || *str == '=' || *str == '"' ) {
+        if (*str == ' ' || *str == '\n' || *str == '\t' || *str == '.' || *str == '!' || *str == '?' || *str == ',' || *str == ':' || *str == ';' || *str == '@' || *str == '#' || *str == '$' || *str == '%' || *str == '^' || *str == '&' || *str == '*' || *str == '+' || *str == '=' || *str == '"' ){
             state = Sign;
         } else if (state == Sign) {
             state = Letter;
